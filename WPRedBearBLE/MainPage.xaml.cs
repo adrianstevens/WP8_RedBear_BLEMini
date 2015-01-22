@@ -87,7 +87,7 @@ namespace WPRedBearBLE
             {
                 for (int i = 0; i < bleDevices.Count; i++ )
                 {
-                    if(bleDevices[i].Name == "Biscuit")
+                    if(bleDevices[i].Name == "Biscuit" || bleDevices[i].Name == "BLE Mini")
                     {
                         _device = await BluetoothLEDevice.FromIdAsync(bleDevices[i].Id);
                         _services = _device.GattServices;
