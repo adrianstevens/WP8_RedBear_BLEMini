@@ -1,5 +1,5 @@
 ﻿<phone:PhoneApplicationPage
-    x:Class="WPRedBearBLE.MainPage"
+    x:Class="WPRedBearBLE2.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
@@ -42,8 +42,13 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="WP 8.1 to RedBear BLE Mini" Style="{StaticResource PhoneTextLargeStyle}" Margin="12,0"/>
-            <TextBlock TextWrapping="Wrap" Text="You'll need a Windows Phone 8.1 device running at least the Cyan update. You'll also need to manually pair the BLE Mini from the phone's Bluetooth Settings screen.  Look for 'Biscuit' or 'BLE Mini'." Margin="9,0,9,0" Style="{StaticResource PhoneTextNormalStyle}" />
+            <TextBlock TextWrapping="Wrap" Text="Message:" Margin="9,0,9,0" Style="{StaticResource PhoneTextNormalStyle}" />
+            
+            <TextBox x:Name="txtMessage" IsEnabled="False" />
+            <Button x:Name="btnSendMessage" Content="Send Message" IsEnabled="False"/>
+            <TextBlock TextWrapping="Wrap" Text="Output:" Margin="9,0,9,0" Style="{StaticResource PhoneTextNormalStyle}" />
             <TextBox x:Name="txtOutput" VerticalAlignment="Stretch"/>
+            
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
